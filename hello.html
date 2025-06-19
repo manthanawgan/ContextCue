@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="path/to/your/css/file.css">
+    <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ContextCue</title>
 </head>
 <body>
     <h1 id="main-page"> ContextCue </h1>
@@ -12,6 +12,16 @@
         <input type="checkbox" id="mySwitch">
         <span class="slider"></span>
     </label>
-    <script src="popup.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector("#mySwitch").addEventListener("change", function() {
+        if (this.checked) {
+            console.log("Switch is on");
+        } else {
+            console.log("Switch is off");
+        }
+        });
+    });
+    </script>
 </body>
 </html>
