@@ -7,21 +7,17 @@
     <title>ContextCue</title>
 </head>
 <body>
-    <h1 id="main-page"> ContextCue </h1>
-    <label class="switch">
-        <input type="checkbox" id="mySwitch">
-        <span class="slider"></span>
-    </label>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector("#mySwitch").addEventListener("change", function() {
-        if (this.checked) {
-            console.log("Switch is on");
-        } else {
-            console.log("Switch is off");
-        }
-        });
-    });
-    </script>
+    <h1 id="main-page">ContextCue</h1>
+    
+    <div class="switch-container">
+        <label class="toggle-control">
+            <input type="checkbox" id="mySwitch">
+            <span class="control"></span>
+        </label>
+    </div>
+    
+    <p id="status">Switch is off</p>
+    
+    <script src="popup.js"></script>
 </body>
 </html>

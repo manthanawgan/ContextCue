@@ -1,9 +1,14 @@
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector("#mySwitch").addEventListener("change", function() {
-        if (this.checked) {
-            console.log("Switch is on");
-        } else {
-            console.log("Switch is off");
-        }
-    });
+toggleSwitch = document.getElementById("mySwitch");
+Status = document.getElementById("status");
+toggleSwitch.addEventListener("change", function() {
+    if (this.checked) {
+        Status.textContent = "switch is on";
+
+    }   else {
+        Status.textContent = "switch is off";
+    }
 });
+
+
+
+
