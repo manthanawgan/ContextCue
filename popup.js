@@ -2,10 +2,10 @@ toggleSwitch = document.getElementById("mySwitch");
 Status = document.getElementById("status");
 toggleSwitch.addEventListener("change", function() {
     if (this.checked) {
-        Status.textContent = "switch is on";
+        Status.textContent = "Switch is on";
 
     }   else {
-        Status.textContent = "switch is off";
+        Status.textContent = "Switch is off";
     }
 });
 
