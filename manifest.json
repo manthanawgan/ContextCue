@@ -1,10 +1,29 @@
 {
-    "name": "Hello Extension",
-    "description": "just a simple experimentation of extensions",
-    "version": "1.0",
-    "manifest_version": 3,
-    "action": {
-        "default_popup": "popup/popup.html",
-        "default_icon": "hello_extension.png"
+  "manifest_version": 3,
+  "name": "Gemini Text Explainer",
+  "version": "1.0",
+  "description": "Select text on any page to get a brief explanation from Gemini.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html"
+
+  },
+  "content_scripts": [
+  {
+    "matches": ["<all_urls>"],
+    "js": ["content/content.js"],
+    "css": ["content/content.style.css"]
+  }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["popup/popup.style.css"],
+      "matches": ["<all_urls>"]
     }
+  ]
 }

@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <link rel="stylesheet" href="popup.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ContextCue</title>
+    <title>Gemini Explainer</title>
+    <link rel="stylesheet" type="text/css" href="popup.style.css">
+    <!-- The script should NOT be in the head -->
 </head>
 <body>
-    <h1 id="main-page">ContextCue</h1>
-    
-    <div class="switch-container">
-        <label class="toggle-control">
-            <input type="checkbox" id="mySwitch">
-            <span class="control"></span>
+    <!-- All your HTML content comes first -->
+    <div class="popup-container">
+        <h3>Gemini Explainer</h3>
+        <label class="switch">
+            <input type="checkbox" id="enable-toggle">
+            <span class="slider round"></span>
         </label>
+        <span class="toggle-label">Enable on-page popup</span>
     </div>
-    
-    <p id="status">Switch is off</p>
-    
+
+    <!-- The script tag is the LAST thing in the body -->
     <script src="popup.js"></script>
 </body>
 </html>
